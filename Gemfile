@@ -11,7 +11,6 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'chosen-rails'
 gem 'devise'
-gem 'pry-doc'
 gem 'haml'
 
 group :development, :test do
