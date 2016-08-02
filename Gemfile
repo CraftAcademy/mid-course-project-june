@@ -13,11 +13,12 @@ gem 'chosen-rails'
 gem 'devise'
 gem 'haml'
 
+
 group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'factory_girl_rails'
-  gem 'cucumber-rails', require: false
+  gem 'cucumber-rails', require: false, git: 'https://github.com/mathieujobin/cucumber-rails.git', branch: 'patch-1'
   gem 'database_cleaner'
   gem 'pry'
   gem 'coveralls', require: false
