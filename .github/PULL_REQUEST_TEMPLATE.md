@@ -5,4 +5,8 @@ Changes proposed in this pull request:
 - [item 2 - replace me]
 - ...
 
+Screenshots:
+[If you made some visual changes to the application please upload screenshots
+here, or remove this section]
+
 @diraulo @tochman - This PR is ready for review
