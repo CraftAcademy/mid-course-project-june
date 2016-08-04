@@ -1,8 +1,7 @@
 class RegistrationsController < Devise::RegistrationsController
 
   def create
-    build_resource(sign_up_params)
-    resource.user_type = 'orphanage'
+    build_resource(sign_up_params.merge(user_type: params[:user_type]))
     resource.save
     yield resource if block_given?
     if resource.persisted?
