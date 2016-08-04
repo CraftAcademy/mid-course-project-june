@@ -6,4 +6,9 @@ Feature: As an orphanage
 Scenario: Orphanage sign up
   Given I am on the home page
   And I click "Register your orphanage"
-  Then I should be on the Orphanage registration page
+  Then I should be on the User registration page
+  And I fill in "Email" with "orphanage@random.com"
+  And I fill in "Password" with "my_password"
+  And I fill in "Password Confirmation" with "my_password"
+  And I click "Submit"
+  Then I should be on the Orphanage edit details page

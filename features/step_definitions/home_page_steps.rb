@@ -11,10 +11,22 @@ Then(/^I should see a button "([^"]*)"$/) do |button|
 end
 
 
-Then(/^I should be on the Orphanage registration page$/) do
+Then(/^I should be on the Orphanage edit details page$/) do
   expect(page.current_path).to eq new_orphanage_path
 end
 
 And(/^I click "([^"]*)"$/) do |element|
   click_link_or_button element
+end
+
+Then(/^show me the page$/) do
+  save_and_open_page
+end
+
+Then(/^I should be on the User registration page$/) do
+  expect(page.current_path).to eq new_user_path
+end
+
+And(/^I fill in "([^"]*)" with "([^"]*)"$/) do |field, value|
+  fill_in field, with: value
 end
