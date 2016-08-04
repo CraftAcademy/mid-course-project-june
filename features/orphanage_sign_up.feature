@@ -2,6 +2,11 @@ Feature: As an orphanage
   In order to be able to set up an account and use the system
   I would like to be able to go through a sign up process
 
+  Background:
+    Given the following users exist
+    | email                 | password    | password_confirmation |
+    | orphanage2@random.com | my_password | my_password           |
+
   Scenario: Orphanage sign up
     Given I am on the home page
     And I click "Register your orphanage"
@@ -29,3 +34,11 @@ Feature: As an orphanage
     And I fill in "Password confirmation" with "wrong_password"
     And I click "Sign up"
     Then I should see "Password confirmation doesn't match Password"
+
+  Scenario: User already exists
+    Given I am on the User registration page
+    And I fill in "Email" with "orphanage2@random.com"
+    And I fill in "Password" with "my_password"
+    And I fill in "Password confirmation" with "my_password"
+    And I click "Sign up"
+    Then I should see "Email has already been taken"
