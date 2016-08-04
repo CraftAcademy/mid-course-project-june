@@ -1,0 +1,9 @@
+%h3 Welcome to the orphanage donation page
+
+%h4 Featured Orphanages
+
+- @orphanages.each do |orphanage|
+  %h5= orphanage[:name]
+  %p= orphanage[:description]
+  %button Donate
+
