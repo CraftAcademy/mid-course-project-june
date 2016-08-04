@@ -7,5 +7,5 @@ Feature: Home Page
   Scenario: Viewing the home Page
     Given I am on the home Page
     Then I should see "Welcome to the orphanage donation page"
-    Then I should see "Featured Orphanages"
-    Then I should see a button "Donate"
+    And I should see a button "Donate"
+    
