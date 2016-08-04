@@ -1,4 +1,4 @@
-Given(/^I am on the home Page$/) do
+Given(/^I am on the home page$/) do
   visit root_path
 end
 
@@ -8,4 +8,13 @@ end
 
 Then(/^I should see a button "([^"]*)"$/) do |button|
   expect(page).to have_button button
+end
+
+
+Then(/^I should be on the Orphanage registration page$/) do
+  expect(page.current_path).to eq new_orphanage_path
+end
+
+And(/^I click "([^"]*)"$/) do |element|
+  click_link_or_button element
 end

@@ -11,8 +11,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'chosen-rails'
 gem 'devise'
-gem 'haml'
-
+gem 'haml-rails'
 
 group :development, :test do
   gem 'rspec-rails'
