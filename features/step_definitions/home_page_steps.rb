@@ -24,9 +24,15 @@ Then(/^show me the page$/) do
 end
 
 Then(/^I should be on the User registration page$/) do
-  expect(page.current_path).to eq new_user_path
+  expect(page.current_path).to eq new_user_registration_path
 end
 
 And(/^I fill in "([^"]*)" with "([^"]*)"$/) do |field, value|
   fill_in field, with: value
+end
+
+Then(/^a new User with type "([^"]*)" should be created$/) do |arg|
+  binding.pry
+  new_user = User.last
+  expect(new_user.type).to eq 'orphanage'
 end

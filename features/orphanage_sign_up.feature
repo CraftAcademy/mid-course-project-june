@@ -9,6 +9,7 @@ Scenario: Orphanage sign up
   Then I should be on the User registration page
   And I fill in "Email" with "orphanage@random.com"
   And I fill in "Password" with "my_password"
-  And I fill in "Password Confirmation" with "my_password"
-  And I click "Submit"
-  Then I should be on the Orphanage edit details page
+  And I fill in "Password confirmation" with "my_password"
+  And I click "Sign up"
+  Then a new User with type "orphanage" should be created
+  And I should be on the Orphanage edit details page
