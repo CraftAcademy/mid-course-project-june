@@ -14,3 +14,11 @@ Scenario: Orphanage sign up
   Then a new User with user type "orphanage" should be created
   And I should be on the Orphanage edit details page
 
+Scenario: Signing up with empty fields
+  Given I am on the User registration page
+  And I fill in "Email" with ""
+  And I fill in "Password" with ""
+  And I fill in "Password confirmation" with ""
+  And I click "Sign up"
+  Then I should see "Email can't be blank"
+  Then I should see "Password can't be blank"
