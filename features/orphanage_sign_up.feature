@@ -3,14 +3,13 @@ Feature: As an orphanage
   I would like to be able to go through a sign up process
 
   Background:
-    Given the following users exist
+    Given I am on the home page
+    And I click "Register your orphanage"
+    And the following users exist
     | email                 | password    | password_confirmation |
     | orphanage2@random.com | my_password | my_password           |
 
   Scenario: Orphanage sign up
-    Given I am on the home page
-    And I click "Register your orphanage"
-    Then I should be on the User registration page
     And I fill in "Email" with "orphanage@random.com"
     And I fill in "Password" with "my_password"
     And I fill in "Password confirmation" with "my_password"
@@ -19,7 +18,6 @@ Feature: As an orphanage
     And I should be on the Orphanage edit details page
 
   Scenario: Signing up with empty fields
-    Given I am on the User registration page
     And I fill in "Email" with ""
     And I fill in "Password" with ""
     And I fill in "Password confirmation" with ""
@@ -28,7 +26,6 @@ Feature: As an orphanage
     Then I should see "Password can't be blank"
 
   Scenario: Password confirmation not matching
-    Given I am on the User registration page
     And I fill in "Email" with "orphanage@random.com"
     And I fill in "Password" with "my_password"
     And I fill in "Password confirmation" with "wrong_password"
@@ -36,7 +33,6 @@ Feature: As an orphanage
     Then I should see "Password confirmation doesn't match Password"
 
   Scenario: User already exists
-    Given I am on the User registration page
     And I fill in "Email" with "orphanage2@random.com"
     And I fill in "Password" with "my_password"
     And I fill in "Password confirmation" with "my_password"
