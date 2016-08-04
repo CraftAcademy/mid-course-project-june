@@ -31,8 +31,7 @@ And(/^I fill in "([^"]*)" with "([^"]*)"$/) do |field, value|
   fill_in field, with: value
 end
 
-Then(/^a new User with type "([^"]*)" should be created$/) do |arg|
-  binding.pry
+Then(/^a new User with user type "([^"]*)" should be created$/) do |arg|
   new_user = User.last
-  expect(new_user.type).to eq 'orphanage'
+  expect(new_user.user_type).to eq 'orphanage'
 end
