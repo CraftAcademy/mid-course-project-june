@@ -5,7 +5,3 @@ Given(/^the following users exist$/) do |table|
                               password_confirmation: user[:password_confirmation])
   end
 end
-
-Given(/^I am on the User registration page$/) do
-  visit new_user_registration_path
-end
