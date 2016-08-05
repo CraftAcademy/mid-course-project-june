@@ -1,13 +1,13 @@
-Given(/^I am on the "([^"]*)" page$/) do |pagename|
-  visit path(pagename)
+Given(/^I am on the "([^"]*)" page$/) do |page_name|
+  visit path(page_name)
 end
 
-Then(/^I should be on the "([^"]*)" page$/) do |pagename|
-  expect(page.current_path).to eq path(pagename)
+Then(/^I should be on the "([^"]*)" page$/) do |page_name|
+  expect(page.current_path).to eq path(page_name)
 end
 
-def path(pagename)
-  case pagename
+def path(page_name)
+  case page_name
   when "login"
       new_user_session_path
   when "home"

@@ -18,4 +18,3 @@ Feature: Login page
     And I fill in "Email" with "orphanage@random.com"
     And I fill in "Password" with "my_password"
     And I click "Log in"
-  
