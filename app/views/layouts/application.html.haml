@@ -1,7 +1,8 @@
 !!!
 %html
   %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{content: 'text/html; charset=UTF-8', 'http-equiv' => 'Content-Type'}
+    %meta{content: 'width=device-width, initial-scale=1.0', name: 'viewport'}
     %title MidCourseProjectJune
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
@@ -10,7 +11,7 @@
     %header
       = link_to 'Login', new_user_session_path
       - flash.each do |key, value|
-        %div{:class => "text-center #{flash_class(key)}"}
+        %div{class: "text-center #{flash_class(key)}"}
           = value
 
     = yield

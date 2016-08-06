@@ -12,6 +12,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'chosen-rails'
 gem 'devise'
 gem 'haml-rails'
+gem 'foundation-rails'
 
 group :development, :test do
   gem 'rspec-rails'
