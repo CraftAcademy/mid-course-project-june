@@ -3,7 +3,7 @@ Feature: As an orphanage
   I would like to be able to go through a sign up process
 
   Background:
-    Given I am on the home page
+    Given I am on the "home" page
     And I click "Register your orphanage"
     And the following users exist
     | email                 | password    | password_confirmation |
@@ -15,7 +15,7 @@ Feature: As an orphanage
     And I fill in "Password confirmation" with "my_password"
     And I click "Sign up"
     Then a new User with user type "orphanage" should be created
-    And I should be on the Orphanage edit details page
+    And I should be on the "Orphanage edit details" page
 
   Scenario: Signing up with empty fields
     And I fill in "Email" with ""

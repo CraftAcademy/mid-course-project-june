@@ -5,7 +5,6 @@ Feature: Home Page
   and how I can donate to satisfy the goals/needs
 
   Scenario: Viewing the home page
-    Given I am on the home page
+    Given I am on the "home" page
     Then I should see "Welcome to the orphanage donation page"
     And I should see a button "Donate"
-    
